@@ -24,5 +24,9 @@ namespace RisolutoreEsercizi{
             ext2fsPanel.Controls.Add(extForm);
             extForm.Show();
         }
+
+        private void fATToolStripMenuItem_Click(object sender, EventArgs e) {
+            
+        }
     }
 }

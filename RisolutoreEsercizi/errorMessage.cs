@@ -13,5 +13,9 @@ namespace RisolutoreEsercizi {
             MessageBox.Show("Controlla di aver inserito correttamente tutti i dati", "Errore");
         }
 
+        public void overflowError() {
+            MessageBox.Show("Errore di overflow durante l'esecuzione dei calcoli", "Errore");
+        }
+
     }
 }

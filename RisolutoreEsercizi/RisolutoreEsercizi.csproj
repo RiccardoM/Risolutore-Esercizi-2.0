@@ -61,6 +61,12 @@
     <Compile Include="Forms\ext2fsForm.Designer.cs">
       <DependentUpon>ext2fsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\fatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fatForm.Designer.cs">
+      <DependentUpon>fatForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\fileSystemForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ext2fsForm.resx">
       <DependentUpon>ext2fsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fatForm.resx">
+      <DependentUpon>fatForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fileSystemForm.resx">
       <DependentUpon>fileSystemForm.cs</DependentUpon>

@@ -21,9 +21,9 @@ namespace RisolutoreEsercizi {
             numBlocParPotLabel.Text = potNumBlocPar;
             bitLabel.Text = bit;
             numBlocInodeLabel.Text = numBlocInd;
-            maxFileDimLabel.Text = maxFileDim;
-            strutDimLabel.Text = strutDim;
-            rappLabel.Text = rapp;
+            maxFileDimLabel.Text = maxFileDim + " B";
+            strutDimLabel.Text = strutDim + " B";
+            rappLabel.Text = rapp + " %";
 
         }
 

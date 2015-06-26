@@ -11,21 +11,9 @@ using System.Windows.Forms;
 
 namespace RisolutoreEsercizi {
 
-
     class ext2fsSolve {
 
-        //Variabili pubbliche
-        /*
-        public static string dimParText;
-        public static string dimBloccoText;
-        public static string dimInodeText;
-        public static bool KBPressed;
-        public static bool MBPressed;
-        public static string numBlocIndexText;
-        public static int indrirNum;
-        */
-
-        public void solve( long dimPar, long dimBloc, long dimInode, bool KBRadioButton, bool MBradioButton, long numIndexPrin, long numIndir ) {
+        public void solve(long dimPar, long dimBloc, long dimInode, bool KBRadioButton, bool MBradioButton, long numIndexPrin, long numIndir) {
 
             // ###############################
             // #### Preparazione dei dati ####
@@ -55,10 +43,10 @@ namespace RisolutoreEsercizi {
             long numBloc = dimPar / dimBloc;
 
             //Calcolo numero di bit necessari per indirizzare tutti i blocchi
-            int numBit=0;
+            int numBit = 0;
             long log = Convert.ToInt64(Math.Log(numBloc, 2));
 
-            if(log % 8 != 0) {
+            if (log % 8 != 0) {
                 numBit = Convert.ToInt32(((log / 8) + 1) * 8);
             }
 
@@ -70,12 +58,12 @@ namespace RisolutoreEsercizi {
             long numBlocInd = dimInode / (numBit / 8);
 
             //Dimensione massima del file
-            long maxFileDim=0;
+            double maxFileDim = 0;
 
             //Dimensione della struttura
-            long strutDim=0;
-
-            switch (numIndir) {
+            double strutDim = 0;
+            try {
+                switch (numIndir) {
                 case 0:
                     maxFileDim = numIndexPrin;
                     strutDim = dimInode;
@@ -88,19 +76,26 @@ namespace RisolutoreEsercizi {
 
                 case 2:
                     maxFileDim = (numIndexPrin + numBlocInd + Convert.ToInt64(Math.Pow(numBlocInd, 2)));
-                    strutDim = (2 + numBlocInd)* dimInode;
+                    strutDim = (2 + numBlocInd) * dimInode;
                     break;
 
                 case 3:
-                    maxFileDim = (numIndexPrin + numBlocInd + Convert.ToInt64(Math.Pow(numBlocInd, 2)) + Convert.ToInt64(Math.Pow(numBlocInd, 3)) );
-                    strutDim = (3 + numBlocInd + Convert.ToInt64(Math.Pow(numBlocInd, 2)) ) * dimInode;
+                    maxFileDim = (numIndexPrin + numBlocInd + Convert.ToInt64(Math.Pow(numBlocInd, 2)) + Convert.ToInt64(Math.Pow(numBlocInd, 3)));
+                    strutDim = (3 + numBlocInd + Convert.ToInt64(Math.Pow(numBlocInd, 2))) * dimInode;
                     break;
+                }
+            }
+
+            //Gestisci l'eccesione da overflow
+            catch (System.OverflowException) {
+                errorMessage eMessage = new errorMessage();
+                eMessage.overflowError();
             }
 
             maxFileDim = maxFileDim * dimBloc;
 
             //Calcolo il rapporto inflattivo
-            double rapp = Math.Round(Convert.ToDouble(strutDim / maxFileDim), 2) * 100;
+            double rapp = Math.Round((strutDim / maxFileDim), 5) * 100;
 
 
 

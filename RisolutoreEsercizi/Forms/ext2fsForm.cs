@@ -12,17 +12,6 @@ namespace RisolutoreEsercizi{
 
     public partial class ext2fsForm : Form{
 
-        /*
-        //Variabili pubbliche
-        public static string dimParText;
-        public static string dimBloccoText;
-        public static string dimInodeText;
-        public static bool KBPressed;
-        public static bool MBPressed;
-        public static string numBlocIndexText;
-        public static int indrirNum;
-        */
-
         //Inizializzo componenti
         public ext2fsForm(){
             InitializeComponent();
@@ -54,6 +43,16 @@ namespace RisolutoreEsercizi{
         // ###################################
         // ####### Genero dati casuali #######
         // ###################################
+
+        //Variabili pubbliche
+        public static string dimParText = "";
+        public static string dimBloccoText = "";
+        public static string dimInodeText = "";
+        public static bool KBPressed = false;
+        public static bool MBPressed = false;
+        public static string numBlocIndexText = "";
+        public static int indrirNum = 0;
+
         private void generateButton_Click(object sender, EventArgs e) {
 
             //Crea nuova istanza della classe per generare dati random
@@ -62,7 +61,6 @@ namespace RisolutoreEsercizi{
             //Genera dati
             genExt2fs.generate();
 
-            /*
             //Compila i campi
             dimParTextbox.Text = dimParText;
             dimBloccoTextbox.Text = dimBloccoText;
@@ -70,8 +68,7 @@ namespace RisolutoreEsercizi{
             inodeKBRadioButton.Checked = KBPressed;
             inodeMBradioButton.Checked = MBPressed;
             numIndexPrinInodeTextbox.Text = numBlocIndexText;
-            indirNumCombobox.SelectedIndex = indrirNum;
-            */
+            numIndirCombobox.SelectedIndex = indrirNum;
 
         }
 
@@ -90,16 +87,12 @@ namespace RisolutoreEsercizi{
                                    Convert.ToInt64(numIndirCombobox.Text) );
             }
 
-            //Se qualcosa non va
+            //Gestisci l'eccezione da formato
             catch (System.FormatException) {
-
-                //Mostra l'avviso
                 eMessage.formatError();
-
             }
 
         }
 
-        
     }
 }

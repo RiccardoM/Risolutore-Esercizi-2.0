@@ -8,18 +8,18 @@ namespace RisolutoreEsercizi {
 
     class ext2fsGenerate {
 
-        //Variabili pubbliche
-        public static string dimParText;
-        public static string dimBloccoText;
-        public static string dimInodeText;
-        public static bool KBPressed;
-        public static bool MBPressed;
-        public static string numBlocIndexText;
-        public static int indrirNum;
-
         //Genera dati casuali
         public void generate() {
+            Random rndm = new Random();
 
+            ext2fsForm.dimParText = Math.Pow(2, rndm.Next(4, 11)).ToString();
+            ext2fsForm.dimBloccoText = Math.Pow(2, rndm.Next(0, 7)).ToString();
+            ext2fsForm.dimInodeText = Math.Pow(2, rndm.Next(2, 11)).ToString();
+            int pressed = rndm.Next(0, 2);
+            ext2fsForm.KBPressed = Convert.ToBoolean(pressed);
+            ext2fsForm.MBPressed = Convert.ToBoolean((pressed + 1) % 2);
+            ext2fsForm.numBlocIndexText = rndm.Next(0, 15).ToString();
+            ext2fsForm.indrirNum = rndm.Next(0, 4);
 
         }
 

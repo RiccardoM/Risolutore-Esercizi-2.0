@@ -60,6 +60,7 @@
             this.fATToolStripMenuItem.Name = "fATToolStripMenuItem";
             this.fATToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.fATToolStripMenuItem.Text = "FAT";
+            this.fATToolStripMenuItem.Click += new System.EventHandler(this.fATToolStripMenuItem_Click);
             // 
             // nTFSToolStripMenuItem
             // 
