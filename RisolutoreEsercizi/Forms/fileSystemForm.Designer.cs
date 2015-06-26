@@ -63,6 +63,7 @@
             // 
             // nTFSToolStripMenuItem
             // 
+            this.nTFSToolStripMenuItem.Enabled = false;
             this.nTFSToolStripMenuItem.Name = "nTFSToolStripMenuItem";
             this.nTFSToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.nTFSToolStripMenuItem.Text = "NTFS";

@@ -40,7 +40,7 @@
             this.sistemiOperativiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(475, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(491, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -56,16 +56,17 @@
             this.sistemiOperativiPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sistemiOperativiPanel.Location = new System.Drawing.Point(0, 24);
             this.sistemiOperativiPanel.Name = "sistemiOperativiPanel";
-            this.sistemiOperativiPanel.Size = new System.Drawing.Size(475, 511);
+            this.sistemiOperativiPanel.Size = new System.Drawing.Size(491, 511);
             this.sistemiOperativiPanel.TabIndex = 1;
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 535);
+            this.ClientSize = new System.Drawing.Size(491, 535);
             this.Controls.Add(this.sistemiOperativiPanel);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

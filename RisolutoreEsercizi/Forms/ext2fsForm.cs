@@ -28,6 +28,25 @@ namespace RisolutoreEsercizi{
             InitializeComponent();
         }
 
+
+        //Controllo che gli input nei Textbox siano solo numer
+        private void dimParTextbox_KeyPress(object sender, KeyPressEventArgs e) {
+            e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
+        }
+
+        private void dimBloccoTextbox_KeyPress(object sender, KeyPressEventArgs e) {
+            e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
+        }
+
+        private void dimInodeTextbox_KeyPress(object sender, KeyPressEventArgs e) {
+            e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
+        }
+
+        private void numIndexPrinInodeTextbox_KeyPress(object sender, KeyPressEventArgs e) {
+            e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
+        }
+
+
         //Crea nuova istanza della classe per gli avvisi di errore
         errorMessage eMessage = new errorMessage();
 

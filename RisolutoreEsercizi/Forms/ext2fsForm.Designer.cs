@@ -62,6 +62,8 @@
             this.dimParTextbox.Name = "dimParTextbox";
             this.dimParTextbox.Size = new System.Drawing.Size(49, 20);
             this.dimParTextbox.TabIndex = 1;
+            this.dimParTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.dimParTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dimParTextbox_KeyPress);
             // 
             // dimBloccoTextbox
             // 
@@ -70,6 +72,8 @@
             this.dimBloccoTextbox.Name = "dimBloccoTextbox";
             this.dimBloccoTextbox.Size = new System.Drawing.Size(49, 20);
             this.dimBloccoTextbox.TabIndex = 3;
+            this.dimBloccoTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.dimBloccoTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dimBloccoTextbox_KeyPress);
             // 
             // dimBloccoLabel
             // 
@@ -105,6 +109,8 @@
             this.dimInodeTextbox.Name = "dimInodeTextbox";
             this.dimInodeTextbox.Size = new System.Drawing.Size(49, 20);
             this.dimInodeTextbox.TabIndex = 7;
+            this.dimInodeTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.dimInodeTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dimInodeTextbox_KeyPress);
             // 
             // dimInodeLabel
             // 
@@ -144,6 +150,8 @@
             this.numIndexPrinInodeTextbox.Name = "numIndexPrinInodeTextbox";
             this.numIndexPrinInodeTextbox.Size = new System.Drawing.Size(49, 20);
             this.numIndexPrinInodeTextbox.TabIndex = 11;
+            this.numIndexPrinInodeTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numIndexPrinInodeTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numIndexPrinInodeTextbox_KeyPress);
             // 
             // label1
             // 

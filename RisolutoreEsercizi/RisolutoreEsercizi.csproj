@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\Versione di debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -27,7 +27,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\Versione ufficiale\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="errorMessage.cs" />
     <Compile Include="ext2fsGenerate.cs" />
+    <Compile Include="Forms\ext2fsRresultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ext2fsRresultsForm.Designer.cs">
+      <DependentUpon>ext2fsRresultsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ext2fsSolve.cs" />
     <Compile Include="Forms\ext2fsForm.cs">
       <SubType>Form</SubType>
@@ -75,6 +81,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ext2fsRresultsForm.resx">
+      <DependentUpon>ext2fsRresultsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ext2fsForm.resx">
       <DependentUpon>ext2fsForm.cs</DependentUpon>
     </EmbeddedResource>
