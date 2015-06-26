@@ -1,4 +1,4 @@
-﻿namespace RisolutoreEsercizi.Forms {
+﻿namespace RisolutoreEsercizi {
     partial class fatForm {
         /// <summary>
         /// Required designer variable.
@@ -23,55 +23,51 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.generateButton = new System.Windows.Forms.Button();
             this.takeButton = new System.Windows.Forms.Button();
-            this.numIndexPrinInodeTextbox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dimFileTextbox = new System.Windows.Forms.TextBox();
+            this.dimFileLabel = new System.Windows.Forms.Label();
             this.KBBloccoLabel = new System.Windows.Forms.Label();
             this.GBParLabel = new System.Windows.Forms.Label();
             this.dimBloccoTextbox = new System.Windows.Forms.TextBox();
             this.dimBloccoLabel = new System.Windows.Forms.Label();
             this.dimParTextbox = new System.Windows.Forms.TextBox();
             this.dimParLabel = new System.Windows.Forms.Label();
+            this.BRadioButton = new System.Windows.Forms.RadioButton();
+            this.MBRadioButton = new System.Windows.Forms.RadioButton();
+            this.GBRadioButton = new System.Windows.Forms.RadioButton();
+            this.KBRadioButton = new System.Windows.Forms.RadioButton();
+            this.generateButton = new System.Windows.Forms.Button();
             this.solveButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // generateButton
-            // 
-            this.generateButton.Location = new System.Drawing.Point(12, 235);
-            this.generateButton.Name = "generateButton";
-            this.generateButton.Size = new System.Drawing.Size(467, 39);
-            this.generateButton.TabIndex = 31;
-            this.generateButton.Text = "Genera dati casuali";
-            this.generateButton.UseVisualStyleBackColor = true;
             // 
             // takeButton
             // 
-            this.takeButton.Location = new System.Drawing.Point(12, 146);
+            this.takeButton.Enabled = false;
+            this.takeButton.Location = new System.Drawing.Point(12, 121);
             this.takeButton.Name = "takeButton";
             this.takeButton.Size = new System.Drawing.Size(467, 39);
-            this.takeButton.TabIndex = 30;
+            this.takeButton.TabIndex = 31;
             this.takeButton.Text = "Preleva dati dal pannello Ext2fs";
             this.takeButton.UseVisualStyleBackColor = true;
             // 
-            // numIndexPrinInodeTextbox
+            // dimFileTextbox
             // 
-            this.numIndexPrinInodeTextbox.Location = new System.Drawing.Point(130, 70);
-            this.numIndexPrinInodeTextbox.MaxLength = 32;
-            this.numIndexPrinInodeTextbox.Name = "numIndexPrinInodeTextbox";
-            this.numIndexPrinInodeTextbox.Size = new System.Drawing.Size(143, 20);
-            this.numIndexPrinInodeTextbox.TabIndex = 27;
-            this.numIndexPrinInodeTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.dimFileTextbox.Location = new System.Drawing.Point(143, 70);
+            this.dimFileTextbox.MaxLength = 32;
+            this.dimFileTextbox.Name = "dimFileTextbox";
+            this.dimFileTextbox.Size = new System.Drawing.Size(130, 20);
+            this.dimFileTextbox.TabIndex = 23;
+            this.dimFileTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.dimFileTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dimInodeTextbox_KeyPress);
             // 
-            // label1
+            // dimFileLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 13);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Dimensione file:";
+            this.dimFileLabel.AutoSize = true;
+            this.dimFileLabel.Location = new System.Drawing.Point(9, 73);
+            this.dimFileLabel.Name = "dimFileLabel";
+            this.dimFileLabel.Size = new System.Drawing.Size(81, 13);
+            this.dimFileLabel.TabIndex = 22;
+            this.dimFileLabel.Text = "Dimensione file:";
             // 
             // KBBloccoLabel
             // 
@@ -99,6 +95,7 @@
             this.dimBloccoTextbox.Size = new System.Drawing.Size(49, 20);
             this.dimBloccoTextbox.TabIndex = 19;
             this.dimBloccoTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.dimBloccoTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dimBloccoTextbox_KeyPress);
             // 
             // dimBloccoLabel
             // 
@@ -117,6 +114,7 @@
             this.dimParTextbox.Size = new System.Drawing.Size(49, 20);
             this.dimParTextbox.TabIndex = 17;
             this.dimParTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.dimParTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dimParTextbox_KeyPress);
             // 
             // dimParLabel
             // 
@@ -127,35 +125,83 @@
             this.dimParLabel.TabIndex = 16;
             this.dimParLabel.Text = "Dimensione partizione:";
             // 
+            // BRadioButton
+            // 
+            this.BRadioButton.AutoSize = true;
+            this.BRadioButton.Location = new System.Drawing.Point(282, 71);
+            this.BRadioButton.Name = "BRadioButton";
+            this.BRadioButton.Size = new System.Drawing.Size(32, 17);
+            this.BRadioButton.TabIndex = 24;
+            this.BRadioButton.TabStop = true;
+            this.BRadioButton.Text = "B";
+            this.BRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // MBRadioButton
+            // 
+            this.MBRadioButton.AutoSize = true;
+            this.MBRadioButton.Location = new System.Drawing.Point(365, 70);
+            this.MBRadioButton.Name = "MBRadioButton";
+            this.MBRadioButton.Size = new System.Drawing.Size(41, 17);
+            this.MBRadioButton.TabIndex = 25;
+            this.MBRadioButton.TabStop = true;
+            this.MBRadioButton.Text = "MB";
+            this.MBRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // GBRadioButton
+            // 
+            this.GBRadioButton.AutoSize = true;
+            this.GBRadioButton.Location = new System.Drawing.Point(412, 70);
+            this.GBRadioButton.Name = "GBRadioButton";
+            this.GBRadioButton.Size = new System.Drawing.Size(40, 17);
+            this.GBRadioButton.TabIndex = 33;
+            this.GBRadioButton.TabStop = true;
+            this.GBRadioButton.Text = "GB";
+            this.GBRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // KBRadioButton
+            // 
+            this.KBRadioButton.AutoSize = true;
+            this.KBRadioButton.Location = new System.Drawing.Point(320, 71);
+            this.KBRadioButton.Name = "KBRadioButton";
+            this.KBRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.KBRadioButton.TabIndex = 32;
+            this.KBRadioButton.TabStop = true;
+            this.KBRadioButton.Text = "KB";
+            this.KBRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // generateButton
+            // 
+            this.generateButton.Location = new System.Drawing.Point(12, 190);
+            this.generateButton.Name = "generateButton";
+            this.generateButton.Size = new System.Drawing.Size(467, 39);
+            this.generateButton.TabIndex = 35;
+            this.generateButton.Text = "Genera dati casuali";
+            this.generateButton.UseVisualStyleBackColor = true;
+            // 
             // solveButton
             // 
-            this.solveButton.Location = new System.Drawing.Point(12, 280);
+            this.solveButton.Location = new System.Drawing.Point(12, 235);
             this.solveButton.Name = "solveButton";
             this.solveButton.Size = new System.Drawing.Size(467, 39);
-            this.solveButton.TabIndex = 33;
+            this.solveButton.TabIndex = 34;
             this.solveButton.Text = "Risolvi";
             this.solveButton.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(280, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(14, 13);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "B";
+            this.solveButton.Click += new System.EventHandler(this.solveButton_Click);
             // 
             // fatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 573);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.solveButton);
             this.Controls.Add(this.generateButton);
+            this.Controls.Add(this.solveButton);
+            this.Controls.Add(this.GBRadioButton);
+            this.Controls.Add(this.KBRadioButton);
             this.Controls.Add(this.takeButton);
-            this.Controls.Add(this.numIndexPrinInodeTextbox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.MBRadioButton);
+            this.Controls.Add(this.BRadioButton);
+            this.Controls.Add(this.dimFileTextbox);
+            this.Controls.Add(this.dimFileLabel);
             this.Controls.Add(this.KBBloccoLabel);
             this.Controls.Add(this.GBParLabel);
             this.Controls.Add(this.dimBloccoTextbox);
@@ -172,17 +218,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Button generateButton;
         private System.Windows.Forms.Button takeButton;
-        private System.Windows.Forms.TextBox numIndexPrinInodeTextbox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox dimFileTextbox;
+        private System.Windows.Forms.Label dimFileLabel;
         private System.Windows.Forms.Label KBBloccoLabel;
         private System.Windows.Forms.Label GBParLabel;
         private System.Windows.Forms.TextBox dimBloccoTextbox;
         private System.Windows.Forms.Label dimBloccoLabel;
         private System.Windows.Forms.TextBox dimParTextbox;
         private System.Windows.Forms.Label dimParLabel;
+        private System.Windows.Forms.RadioButton BRadioButton;
+        private System.Windows.Forms.RadioButton MBRadioButton;
+        private System.Windows.Forms.RadioButton GBRadioButton;
+        private System.Windows.Forms.RadioButton KBRadioButton;
+        private System.Windows.Forms.Button generateButton;
         private System.Windows.Forms.Button solveButton;
-        private System.Windows.Forms.Label label2;
     }
 }

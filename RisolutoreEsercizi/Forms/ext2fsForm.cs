@@ -18,7 +18,7 @@ namespace RisolutoreEsercizi{
         }
 
 
-        //Controllo che gli input nei Textbox siano solo numer
+        //Controllo che gli input nei Textbox siano solo numeri
         private void dimParTextbox_KeyPress(object sender, KeyPressEventArgs e) {
             e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
         }

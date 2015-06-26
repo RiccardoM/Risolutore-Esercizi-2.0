@@ -23,10 +23,18 @@ namespace RisolutoreEsercizi{
             extForm.AutoScroll = true;
             ext2fsPanel.Controls.Add(extForm);
             extForm.Show();
+            ext2fsPanel.Visible = true;
+            fatPanel.Visible = false;
+
         }
 
         private void fATToolStripMenuItem_Click(object sender, EventArgs e) {
-            
+            fatPanel.Visible = true;
+            fatForm fatForm = new fatForm();
+            fatForm.TopLevel = false;
+            fatForm.AutoScroll = true;
+            fatPanel.Controls.Add(fatForm);
+            fatForm.Show();
         }
     }
 }
