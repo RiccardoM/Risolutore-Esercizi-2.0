@@ -1,4 +1,10 @@
-﻿using System;
+﻿/// <summary>
+/// Questo è il form che contiene il menu per i vari esercizi del corso di Sistemi Operativi. 
+/// </summary>
+
+    
+    
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

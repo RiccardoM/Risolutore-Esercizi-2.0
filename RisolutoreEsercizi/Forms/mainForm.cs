@@ -1,4 +1,8 @@
-﻿using System;
+﻿/// <summary>
+/// Questo è il form principale. 
+/// </summary>
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

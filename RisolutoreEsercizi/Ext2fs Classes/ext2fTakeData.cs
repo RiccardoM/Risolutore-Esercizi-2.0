@@ -1,4 +1,8 @@
-﻿using System;
+﻿/// <summary>
+/// Questa classe serve per prelevare i dati dal pannello Etx2fs e inserirli nei pannelli FAT e NTFS.
+/// </summary>
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace RisolutoreEsercizi {
 
-    class ext2fsMaxFileDimension {
+    class ext2fsTakeData {
 
-        public long maxFileDim(long dimPar, long dimBloc, long dimInode, bool KBRadioButton, bool MBradioButton, long numIndexPrin, long numIndir) {
+        public long takeData(long dimPar, long dimBloc, long dimInode, bool KBRadioButton, bool MBradioButton, long numIndexPrin, long numIndir) {
 
             // ###############################
             // #### Preparazione dei dati ####

@@ -1,5 +1,5 @@
 ﻿/// <summary>
-///  Questa classe serve  per risolvere gli esercizi riguardanti il File System Et2fs
+/// Questa classe serve  per risolvere gli esercizi riguardanti il File System Et2fs
 /// </summary>
 
 using System;

@@ -1,4 +1,8 @@
-﻿using System;
+﻿/// <summary>
+/// Questa classe serve per risolvere gli esercizi nel pannello FAT
+/// </summary>
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

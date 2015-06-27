@@ -49,6 +49,7 @@
             this.takeButton.TabIndex = 31;
             this.takeButton.Text = "Preleva dati dal pannello Ext2fs";
             this.takeButton.UseVisualStyleBackColor = true;
+            this.takeButton.Click += new System.EventHandler(this.takeButton_Click);
             // 
             // dimFileTextbox
             // 
@@ -177,6 +178,7 @@
             this.generateButton.TabIndex = 35;
             this.generateButton.Text = "Genera dati casuali";
             this.generateButton.UseVisualStyleBackColor = true;
+            this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
             // 
             // solveButton
             // 
