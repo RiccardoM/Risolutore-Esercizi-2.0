@@ -21,5 +21,5 @@ Novità:
 
 ## Versione 2.0.2b
 Novità:
-  - Aggiunto il pulsante per la generazione dei dati casuali all'inerno della sezione FAT.
+  - Aggiunto il pulsante per la generazione casuale dei dati all'interno della sezione FAT.
   - Aggiunti i <summary> ad ogni classe e form per descrivere brevemente quale compito svolge ognuno di loro.
