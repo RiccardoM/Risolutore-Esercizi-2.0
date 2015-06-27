@@ -47,9 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="errorMessage.cs" />
-    <Compile Include="Ext2fs Classes\ext2fTakeData.cs" />
+    <Compile Include="Ext2fs Classes\ext2fsMaxFileDim.cs" />
     <Compile Include="Ext2fs Classes\ext2fsGenerate.cs" />
     <Compile Include="FAT Classes\fatGenerate.cs" />
+    <Compile Include="fatTakeData.cs" />
     <Compile Include="Forms\fatResultsForm.cs">
       <SubType>Form</SubType>
     </Compile>

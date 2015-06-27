@@ -1,5 +1,5 @@
 ﻿/// <summary>
-/// Questa classe serve per prelevare i dati dal pannello Etx2fs e inserirli nei pannelli FAT e NTFS.
+/// Questa classe serve per calcola la dimensione massima di un file nel pannello Ext2fs.
 /// </summary>
 
 using System;
@@ -10,14 +10,13 @@ using System.Threading.Tasks;
 
 namespace RisolutoreEsercizi {
 
-    class ext2fsTakeData {
+    class ext2fsMaxFileDim {
 
-        public long takeData(long dimPar, long dimBloc, long dimInode, bool KBRadioButton, bool MBradioButton, long numIndexPrin, long numIndir) {
+        public long maxFileDim(long dimPar, long dimBloc, long dimInode, bool KBRadioButton, bool MBradioButton, long numIndexPrin, long numIndir) {
 
             // ###############################
             // #### Preparazione dei dati ####
             // ###############################
-
             //Calcolo vera dimensione della partizione in B
             dimPar = dimPar * Convert.ToInt32(Math.Pow(2, 30));
 
@@ -37,7 +36,6 @@ namespace RisolutoreEsercizi {
             // #####################
             // #### Risoluzione ####
             // #####################
-
             //Calcolo numero di blocchi nella partizione
             long numBloc = dimPar / dimBloc;
 

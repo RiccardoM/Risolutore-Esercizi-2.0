@@ -16,13 +16,29 @@ namespace RisolutoreEsercizi {
 
     public partial class fatForm : Form {
 
-        //Inizializzo componenti
+        // #####################################
+        // #### Inizializzazione componenti ####
+        // #####################################
         public fatForm() {
             InitializeComponent();
         }
 
 
-        //Controllo che gli input nei Textbox siano solo numeri
+        // #############################
+        // #### Variabili pubbliche ####
+        // #############################
+        public static string dimParText;
+        public static string dimBlocText;
+        public static string dimFileText;
+        public static bool BButton;
+        public static bool KBButton;
+        public static bool MBButton;
+        public static bool GBButton;
+
+
+        // ###############################
+        // #### Controllo degli input ####
+        // ###############################
         private void dimInodeTextbox_KeyPress(object sender, KeyPressEventArgs e) {
             e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
         }
@@ -35,36 +51,40 @@ namespace RisolutoreEsercizi {
             e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
         }
 
-        //Crea nuova istanza della classe per gli avvisi di errore
+
+        // ###############################
+        // #### Gestione degli errori ####
+        // ###############################
         errorMessage eMessage = new errorMessage();
+        
 
-
-        //Variabili pubbliche
-        public static string dimParText;
-        public static string dimBlocText;
-        public static string dimFileText;
-        public static bool BButton;
-        public static bool KBButton;
-        public static bool MBButton;
-        public static bool GBButton;
-
-        // ###################################
-        // ########## Preleva dati ###########
-        // ###################################
-
+        // ###########################
+        // ##### Prelevo dei dati ####
+        // ###########################
         private void takeButton_Click(object sender, EventArgs e) {
 
+            try {
+                fatTakeData fatTake = new fatTakeData();
+                fatTake.takeData();
+
+                //Compila i campi
+                dimParTextbox.Text = dimParText;
+                dimBloccoTextbox.Text = dimBlocText;
+                dimFileTextbox.Text = dimFileText;
+                BRadioButton.Checked = true;
+            }
+
+            //Gestione dell'eccezione se la sezione Etx2fs non è completa di tutti i dati
+            catch (System.FormatException) {
+                eMessage.formatErrorExt2fs();
+            }
 
         }
 
 
-
-        // ###################################
-        // ####### Genero dati casuali #######
-        // ###################################
-
-        
-
+        // ######################################
+        // #### Generazione casuale dei dati ####
+        // ######################################
         private void generateButton_Click(object sender, EventArgs e) {
 
             //Crea nuova istanza della classe per generare i dati
@@ -83,9 +103,10 @@ namespace RisolutoreEsercizi {
             GBRadioButton.Checked = GBButton;
         }
 
-        // ###################################
-        // ############# Risolvo #############
-        // ###################################
+
+        // #####################
+        // #### Risoluzione ####
+        // #####################
         private void solveButton_Click(object sender, EventArgs e) {
 
             //Crea nuova istanza della classe per risolvere

@@ -131,6 +131,7 @@
             this.inodeKBRadioButton.TabStop = true;
             this.inodeKBRadioButton.Text = "KB";
             this.inodeKBRadioButton.UseVisualStyleBackColor = true;
+            this.inodeKBRadioButton.Click += new System.EventHandler(this.inodeKBRadioButton_Click);
             // 
             // inodeMBradioButton
             // 
@@ -142,6 +143,7 @@
             this.inodeMBradioButton.TabStop = true;
             this.inodeMBradioButton.Text = "MB";
             this.inodeMBradioButton.UseVisualStyleBackColor = true;
+            this.inodeMBradioButton.Click += new System.EventHandler(this.inodeMBradioButton_Click);
             // 
             // numIndexPrinInodeTextbox
             // 
@@ -184,6 +186,7 @@
             this.numIndirCombobox.Name = "numIndirCombobox";
             this.numIndirCombobox.Size = new System.Drawing.Size(49, 21);
             this.numIndirCombobox.TabIndex = 13;
+            this.numIndirCombobox.SelectedIndexChanged += new System.EventHandler(this.numIndirCombobox_SelectedIndexChanged);
             // 
             // generateButton
             // 
@@ -244,6 +247,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button generateButton;
+        private System.Windows.Forms.Button solveButton;
         private System.Windows.Forms.TextBox dimParTextbox;
         private System.Windows.Forms.TextBox dimBloccoTextbox;
         private System.Windows.Forms.TextBox dimInodeTextbox;
@@ -251,6 +255,5 @@
         private System.Windows.Forms.RadioButton inodeMBradioButton;
         private System.Windows.Forms.ComboBox numIndirCombobox;
         private System.Windows.Forms.TextBox numIndexPrinInodeTextbox;
-        private System.Windows.Forms.Button solveButton;
     }
 }

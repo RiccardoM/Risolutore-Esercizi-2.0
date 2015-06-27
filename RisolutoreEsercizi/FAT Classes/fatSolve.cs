@@ -17,7 +17,6 @@ namespace RisolutoreEsercizi {
             // ###############################
             // #### Preparazione dei dati ####
             // ###############################
-
             //Calcolo vera dimensione della partizione in B
             dimPar = dimPar * Convert.ToInt32(Math.Pow(2, 30));
 
@@ -41,7 +40,6 @@ namespace RisolutoreEsercizi {
             // #####################
             // #### Risoluzione ####
             // #####################
-
             //Calcolo numero di blocchi nella partizione
             long numBloc = dimPar / dimBloc;
 
@@ -70,7 +68,6 @@ namespace RisolutoreEsercizi {
             // ######################################
             // #### Visualizzazione dei risulati ####
             // ######################################
-
             //Creo una nuova istanza del form per la visione dei risultati e lo compilo con i dati
             fatResultsForm fatRes = new fatResultsForm( (Math.Log(dimPar, 2)).ToString(), (Math.Log(dimBloc, 2)).ToString(), (Math.Log(numBloc, 2)).ToString(),
                                                         numBit.ToString(), dimFile.ToString(), dimFat.ToString(), rapp.ToString());

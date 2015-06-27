@@ -23,3 +23,7 @@ Novità:
 Novità:
   - Aggiunto il pulsante per la generazione casuale dei dati all'interno della sezione FAT.
   - Aggiunti i <summary> ad ogni classe e form per descrivere brevemente quale compito svolge ognuno di loro.
+
+## Versione 2.0.2c
+Novità:
+  - Aggiunto il pulsante per il prelievo dei dati dalla sezione Ext2fs verso la sezione FAT.

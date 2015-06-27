@@ -16,49 +16,74 @@ namespace RisolutoreEsercizi{
 
     public partial class ext2fsForm : Form{
 
-        //Inizializzo componenti
+        // #####################################
+        // #### Inizializzazione componenti ####
+        // #####################################
         public ext2fsForm(){
             InitializeComponent();
         }
 
 
-        //Controllo che gli input nei Textbox siano solo numeri
-        private void dimParTextbox_KeyPress(object sender, KeyPressEventArgs e) {
-            e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
-        }
-
-        private void dimBloccoTextbox_KeyPress(object sender, KeyPressEventArgs e) {
-            e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
-        }
-
-        private void dimInodeTextbox_KeyPress(object sender, KeyPressEventArgs e) {
-            e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
-        }
-
-        private void numIndexPrinInodeTextbox_KeyPress(object sender, KeyPressEventArgs e) {
-            e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
-        }
-
-
-        //Crea nuova istanza della classe per gli avvisi di errore
-        errorMessage eMessage = new errorMessage();
-
-
-        // ###################################
-        // ####### Genero dati casuali #######
-        // ###################################
-
-        //Variabili pubbliche
+        // #############################
+        // #### Variabili pubbliche ####
+        // #############################
         public static string dimParText = "";
         public static string dimBloccoText = "";
         public static string dimInodeText = "";
         public static bool KBPressed = false;
         public static bool MBPressed = false;
         public static string numBlocIndexText = "";
-        public static int indrirNum = 0;
+        public static int indirirNum = 0;
 
+
+        // ###############################
+        // #### Controllo degli input ####
+        // ###############################
+        private void dimParTextbox_KeyPress(object sender, KeyPressEventArgs e) {
+            e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
+            dimParText = dimParTextbox.Text;
+        }
+
+        private void dimBloccoTextbox_KeyPress(object sender, KeyPressEventArgs e) {
+            e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
+            dimBloccoText = dimBloccoTextbox.Text;
+        }
+
+        private void dimInodeTextbox_KeyPress(object sender, KeyPressEventArgs e) {
+            e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
+            dimInodeText = dimInodeTextbox.Text;
+        }
+
+        private void numIndexPrinInodeTextbox_KeyPress(object sender, KeyPressEventArgs e) {
+            e.Handled = (!char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar));
+            numBlocIndexText = numIndexPrinInodeTextbox.Text;
+        }
+
+        private void inodeKBRadioButton_Click(object sender, EventArgs e) {
+            KBPressed = true;
+            MBPressed = false;
+        }
+
+        private void inodeMBradioButton_Click(object sender, EventArgs e) {
+            KBPressed = false;
+            MBPressed = true;
+        }
+
+        private void numIndirCombobox_SelectedIndexChanged(object sender, EventArgs e) {
+            indirirNum = numIndirCombobox.SelectedIndex;
+        }
+
+
+        // ###############################
+        // #### Gestione degli errori ####
+        // ###############################
+        errorMessage eMessage = new errorMessage();
+
+
+        // ######################################
+        // #### Generazione casuale dei dati ####
+        // ######################################
         private void generateButton_Click(object sender, EventArgs e) {
-
             //Crea nuova istanza della classe per generare dati random
             ext2fsGenerate genExt2fs = new ext2fsGenerate();
 
@@ -72,15 +97,14 @@ namespace RisolutoreEsercizi{
             inodeKBRadioButton.Checked = KBPressed;
             inodeMBradioButton.Checked = MBPressed;
             numIndexPrinInodeTextbox.Text = numBlocIndexText;
-            numIndirCombobox.SelectedIndex = indrirNum;
-
+            numIndirCombobox.SelectedIndex = indirirNum;
         }
 
-        // ###################################
-        // ############# Risolvo #############
-        // ###################################
-        private void solveButton_Click(object sender, EventArgs e) {
 
+        // #####################
+        // #### Risoluzione ####
+        // #####################
+        private void solveButton_Click(object sender, EventArgs e) {
             //Crea nuova istanza della classe per risolvere
             ext2fsSolve solveExt2fs = new ext2fsSolve();
 
@@ -95,8 +119,8 @@ namespace RisolutoreEsercizi{
             catch (System.FormatException) {
                 eMessage.formatError();
             }
-
         }
 
+        
     }
 }

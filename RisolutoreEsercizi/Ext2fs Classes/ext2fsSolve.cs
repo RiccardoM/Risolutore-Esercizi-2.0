@@ -18,7 +18,6 @@ namespace RisolutoreEsercizi {
             // ###############################
             // #### Preparazione dei dati ####
             // ###############################
-
             //Calcolo vera dimensione della partizione in B
             dimPar = dimPar * Convert.ToInt32(Math.Pow(2, 30));
 
@@ -38,7 +37,6 @@ namespace RisolutoreEsercizi {
             // #####################
             // #### Risoluzione ####
             // #####################
-
             //Calcolo numero di blocchi nella partizione
             long numBloc = dimPar / dimBloc;
 
@@ -58,7 +56,7 @@ namespace RisolutoreEsercizi {
             long numBlocInd = dimInode / (numBit / 8);
 
             //Dimensione massima del file
-            double maxFileDim = 0;
+            long maxFileDim = 0;
 
             //Dimensione della struttura
             double strutDim = 0;
@@ -101,8 +99,7 @@ namespace RisolutoreEsercizi {
 
             // ######################################
             // #### Visualizzazione dei risulati ####
-            // ######################################
-            
+            // ######################################           
             //Creo una nuova istanza del form per la visione dei risultati e lo compilo con i dati
             ext2fsResultForm extRes = new ext2fsResultForm( (Math.Log(dimPar, 2)).ToString(), (Math.Log(dimBloc, 2)).ToString(), (Math.Log(dimInode, 2)).ToString(),
                                                             (Math.Log(numBloc, 2)).ToString(), numBit.ToString(), numBlocInd.ToString(), maxFileDim.ToString(),

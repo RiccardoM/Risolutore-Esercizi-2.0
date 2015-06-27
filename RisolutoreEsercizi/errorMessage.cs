@@ -24,5 +24,9 @@ namespace RisolutoreEsercizi {
             MessageBox.Show("Errore di overflow durante l'esecuzione dei calcoli", "Errore");
         }
 
+        public void formatErrorExt2fs() {
+            MessageBox.Show("Controlla di aver inserito correttamente tutti i dati nella pannello Ext2fs", "Errore");
+        }
+
     }
 }

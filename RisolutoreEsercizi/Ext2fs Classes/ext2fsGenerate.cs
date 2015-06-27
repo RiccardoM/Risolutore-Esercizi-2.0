@@ -27,7 +27,7 @@ namespace RisolutoreEsercizi {
             ext2fsForm.KBPressed = Convert.ToBoolean(pressed);
             ext2fsForm.MBPressed = Convert.ToBoolean((pressed + 1) % 2);
             ext2fsForm.numBlocIndexText = rndm.Next(13, 15).ToString();
-            ext2fsForm.indrirNum = rndm.Next(0, 4);
+            ext2fsForm.indirirNum = rndm.Next(0, 4);
 
         }
 
