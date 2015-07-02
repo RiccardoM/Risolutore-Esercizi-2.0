@@ -27,18 +27,33 @@ namespace RisolutoreEsercizi{
             extForm.AutoScroll = true;
             ext2fsPanel.Controls.Add(extForm);
             extForm.Show();
+
             ext2fsPanel.Visible = true;
             fatPanel.Visible = false;
+            ntfsPanel.Visible = false;
 
         }
 
-        private void fATToolStripMenuItem_Click(object sender, EventArgs e) {
-            fatPanel.Visible = true;
+        private void fATToolStripMenuItem_Click(object sender, EventArgs e) {    
             fatForm fatForm = new fatForm();
             fatForm.TopLevel = false;
             fatForm.AutoScroll = true;
             fatPanel.Controls.Add(fatForm);
             fatForm.Show();
+
+            fatPanel.Visible = true;
+            ntfsPanel.Visible = false;
+        }
+
+        private void nTFSToolStripMenuItem_Click(object sender, EventArgs e) {
+            ntfsForm ntfsForm = new ntfsForm();
+            ntfsForm.TopLevel = false;
+            ntfsForm.AutoScroll = true;
+            ntfsPanel.Controls.Add(ntfsForm);
+            ntfsForm.Show();
+
+            ntfsPanel.Visible = true;
+
         }
     }
 }

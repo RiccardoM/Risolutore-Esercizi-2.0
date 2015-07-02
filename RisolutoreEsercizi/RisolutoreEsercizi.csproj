@@ -50,31 +50,31 @@
     <Compile Include="Ext2fs Classes\ext2fsMaxFileDim.cs" />
     <Compile Include="Ext2fs Classes\ext2fsGenerate.cs" />
     <Compile Include="FAT Classes\fatGenerate.cs" />
-    <Compile Include="fatTakeData.cs" />
-    <Compile Include="Forms\fatResultsForm.cs">
+    <Compile Include="FAT Classes\fatTakeData.cs" />
+    <Compile Include="FAT Classes\fatResultsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\fatResultsForm.Designer.cs">
+    <Compile Include="FAT Classes\fatResultsForm.Designer.cs">
       <DependentUpon>fatResultsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\fatForm.cs">
+    <Compile Include="FAT Classes\fatForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\fatForm.Designer.cs">
+    <Compile Include="FAT Classes\fatForm.Designer.cs">
       <DependentUpon>fatForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FAT Classes\fatSolve.cs" />
-    <Compile Include="Forms\ext2fsResultsForm.cs">
+    <Compile Include="Ext2fs Classes\ext2fsResultsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ext2fsResultsForm.Designer.cs">
+    <Compile Include="Ext2fs Classes\ext2fsResultsForm.Designer.cs">
       <DependentUpon>ext2fsResultsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Ext2fs Classes\ext2fsSolve.cs" />
-    <Compile Include="Forms\ext2fsForm.cs">
+    <Compile Include="Ext2fs Classes\ext2fsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ext2fsForm.Designer.cs">
+    <Compile Include="Ext2fs Classes\ext2fsForm.Designer.cs">
       <DependentUpon>ext2fsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\fileSystemForm.cs">
@@ -95,18 +95,31 @@
     <Compile Include="Forms\mainForm.Designer.cs">
       <DependentUpon>mainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NTFS Classes\ntfsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NTFS Classes\ntfsForm.Designer.cs">
+      <DependentUpon>ntfsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NTFS Classes\ntfsSolve.cs" />
+    <Compile Include="NTFS Classes\ntfsResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NTFS Classes\ntfsResultsForm.Designer.cs">
+      <DependentUpon>ntfsResultsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\fatResultsForm.resx">
+    <EmbeddedResource Include="FAT Classes\fatResultsForm.resx">
       <DependentUpon>fatResultsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ext2fsResultsForm.resx">
+    <EmbeddedResource Include="Ext2fs Classes\ext2fsResultsForm.resx">
       <DependentUpon>ext2fsResultsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ext2fsForm.resx">
+    <EmbeddedResource Include="Ext2fs Classes\ext2fsForm.resx">
       <DependentUpon>ext2fsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\fatForm.resx">
+    <EmbeddedResource Include="FAT Classes\fatForm.resx">
       <DependentUpon>fatForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fileSystemForm.resx">
@@ -117,6 +130,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\sistemiOperativiForm.resx">
       <DependentUpon>sistemiOperativiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NTFS Classes\ntfsForm.resx">
+      <DependentUpon>ntfsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NTFS Classes\ntfsResultsForm.resx">
+      <DependentUpon>ntfsResultsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

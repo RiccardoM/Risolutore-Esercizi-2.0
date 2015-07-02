@@ -28,27 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ext2fsPanel = new System.Windows.Forms.Panel();
+            this.fatPanel = new System.Windows.Forms.Panel();
             this.ext2fsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fATToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nTFSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ext2fsPanel = new System.Windows.Forms.Panel();
-            this.fatPanel = new System.Windows.Forms.Panel();
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ntfsPanel = new System.Windows.Forms.Panel();
             this.ext2fsPanel.SuspendLayout();
+            this.fatPanel.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // ext2fsPanel
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ext2fsToolStripMenuItem,
-            this.fATToolStripMenuItem,
-            this.nTFSToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(491, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.ext2fsPanel.Controls.Add(this.fatPanel);
+            this.ext2fsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ext2fsPanel.Location = new System.Drawing.Point(0, 24);
+            this.ext2fsPanel.Name = "ext2fsPanel";
+            this.ext2fsPanel.Size = new System.Drawing.Size(491, 549);
+            this.ext2fsPanel.TabIndex = 1;
+            // 
+            // fatPanel
+            // 
+            this.fatPanel.Controls.Add(this.ntfsPanel);
+            this.fatPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fatPanel.Location = new System.Drawing.Point(0, 0);
+            this.fatPanel.Name = "fatPanel";
+            this.fatPanel.Size = new System.Drawing.Size(491, 549);
+            this.fatPanel.TabIndex = 0;
             // 
             // ext2fsToolStripMenuItem
             // 
@@ -66,27 +74,30 @@
             // 
             // nTFSToolStripMenuItem
             // 
-            this.nTFSToolStripMenuItem.Enabled = false;
             this.nTFSToolStripMenuItem.Name = "nTFSToolStripMenuItem";
             this.nTFSToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.nTFSToolStripMenuItem.Text = "NTFS";
+            this.nTFSToolStripMenuItem.Click += new System.EventHandler(this.nTFSToolStripMenuItem_Click);
             // 
-            // ext2fsPanel
+            // menuStrip1
             // 
-            this.ext2fsPanel.Controls.Add(this.fatPanel);
-            this.ext2fsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ext2fsPanel.Location = new System.Drawing.Point(0, 24);
-            this.ext2fsPanel.Name = "ext2fsPanel";
-            this.ext2fsPanel.Size = new System.Drawing.Size(491, 549);
-            this.ext2fsPanel.TabIndex = 1;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ext2fsToolStripMenuItem,
+            this.fATToolStripMenuItem,
+            this.nTFSToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(491, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // fatPanel
+            // ntfsPanel
             // 
-            this.fatPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fatPanel.Location = new System.Drawing.Point(0, 0);
-            this.fatPanel.Name = "fatPanel";
-            this.fatPanel.Size = new System.Drawing.Size(491, 549);
-            this.fatPanel.TabIndex = 0;
+            this.ntfsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ntfsPanel.Location = new System.Drawing.Point(0, 0);
+            this.ntfsPanel.Name = "ntfsPanel";
+            this.ntfsPanel.Size = new System.Drawing.Size(491, 549);
+            this.ntfsPanel.TabIndex = 0;
             // 
             // fileSystemForm
             // 
@@ -99,21 +110,22 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "fileSystemForm";
             this.Text = "mainFileSystemForm";
+            this.ext2fsPanel.ResumeLayout(false);
+            this.fatPanel.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.ext2fsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Panel ext2fsPanel;
+        private System.Windows.Forms.Panel fatPanel;
+        private System.Windows.Forms.Panel ntfsPanel;
         private System.Windows.Forms.ToolStripMenuItem ext2fsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fATToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nTFSToolStripMenuItem;
-        private System.Windows.Forms.Panel ext2fsPanel;
-        private System.Windows.Forms.Panel fatPanel;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
