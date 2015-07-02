@@ -1,4 +1,9 @@
-﻿using System;
+﻿/// <summary>
+/// Questa classe serve per generare casualmente dei dati per il pannello NTFS.
+/// Dopo aver generato i dati vengono inoltre compilate le variabili pubbliche del form fatForm che le usa per compilare i vari TextBox.
+/// </summary>
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

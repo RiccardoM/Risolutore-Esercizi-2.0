@@ -30,11 +30,11 @@
         {
             this.ext2fsPanel = new System.Windows.Forms.Panel();
             this.fatPanel = new System.Windows.Forms.Panel();
+            this.ntfsPanel = new System.Windows.Forms.Panel();
             this.ext2fsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fATToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nTFSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ntfsPanel = new System.Windows.Forms.Panel();
             this.ext2fsPanel.SuspendLayout();
             this.fatPanel.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -57,6 +57,14 @@
             this.fatPanel.Name = "fatPanel";
             this.fatPanel.Size = new System.Drawing.Size(491, 549);
             this.fatPanel.TabIndex = 0;
+            // 
+            // ntfsPanel
+            // 
+            this.ntfsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ntfsPanel.Location = new System.Drawing.Point(0, 0);
+            this.ntfsPanel.Name = "ntfsPanel";
+            this.ntfsPanel.Size = new System.Drawing.Size(491, 549);
+            this.ntfsPanel.TabIndex = 0;
             // 
             // ext2fsToolStripMenuItem
             // 
@@ -85,19 +93,12 @@
             this.ext2fsToolStripMenuItem,
             this.fATToolStripMenuItem,
             this.nTFSToolStripMenuItem});
+            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(491, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // ntfsPanel
-            // 
-            this.ntfsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ntfsPanel.Location = new System.Drawing.Point(0, 0);
-            this.ntfsPanel.Name = "ntfsPanel";
-            this.ntfsPanel.Size = new System.Drawing.Size(491, 549);
-            this.ntfsPanel.TabIndex = 0;
             // 
             // fileSystemForm
             // 

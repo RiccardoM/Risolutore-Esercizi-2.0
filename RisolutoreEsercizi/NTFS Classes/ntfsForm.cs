@@ -1,4 +1,8 @@
-﻿using System;
+﻿/// <summary>
+/// Questo è il form base riguardante gli esercizi NTFS.
+/// </summary>
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

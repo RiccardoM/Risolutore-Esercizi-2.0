@@ -77,22 +77,22 @@
     <Compile Include="Ext2fs Classes\ext2fsForm.Designer.cs">
       <DependentUpon>ext2fsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\fileSystemForm.cs">
+    <Compile Include="Menu forms\fileSystemForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\fileSystemForm.Designer.cs">
+    <Compile Include="Menu forms\fileSystemForm.Designer.cs">
       <DependentUpon>fileSystemForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\sistemiOperativiForm.cs">
+    <Compile Include="Menu forms\sistemiOperativiForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\sistemiOperativiForm.Designer.cs">
+    <Compile Include="Menu forms\sistemiOperativiForm.Designer.cs">
       <DependentUpon>sistemiOperativiForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\mainForm.cs">
+    <Compile Include="Menu forms\mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\mainForm.Designer.cs">
+    <Compile Include="Menu forms\mainForm.Designer.cs">
       <DependentUpon>mainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NTFS Classes\ntfsForm.cs">
@@ -109,7 +109,7 @@
       <DependentUpon>ntfsResultsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NTFS Classes\ntfsGenerate.cs" />
-    <Compile Include="ntfsTakeData.cs" />
+    <Compile Include="NTFS Classes\ntfsTakeData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FAT Classes\fatResultsForm.resx">
@@ -124,13 +124,13 @@
     <EmbeddedResource Include="FAT Classes\fatForm.resx">
       <DependentUpon>fatForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\fileSystemForm.resx">
+    <EmbeddedResource Include="Menu forms\fileSystemForm.resx">
       <DependentUpon>fileSystemForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\mainForm.resx">
+    <EmbeddedResource Include="Menu forms\mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\sistemiOperativiForm.resx">
+    <EmbeddedResource Include="Menu forms\sistemiOperativiForm.resx">
       <DependentUpon>sistemiOperativiForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NTFS Classes\ntfsForm.resx">

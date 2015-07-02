@@ -1,5 +1,5 @@
 ﻿/// <summary>
-/// Questa classe serve  per risolvere gli esercizi riguardanti il File System Et2fs
+/// Questa classe serve  per risolvere gli esercizi riguardanti il File System Et2fs.
 /// </summary>
 
 using System;
@@ -60,6 +60,8 @@ namespace RisolutoreEsercizi {
 
             //Dimensione della struttura
             double strutDim = 0;
+
+            //Prova a risolvere
             try {
                 switch (numIndir) {
                 case 0:
@@ -88,6 +90,7 @@ namespace RisolutoreEsercizi {
             catch (System.OverflowException) {
                 errorMessage eMessage = new errorMessage();
                 eMessage.overflowError();
+                return;
             }
 
             maxFileDim = maxFileDim * dimBloc;

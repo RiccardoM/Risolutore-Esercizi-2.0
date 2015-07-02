@@ -1,4 +1,8 @@
-﻿using System;
+﻿/// <summary>
+/// Questa è la classe per prelevare i dati dal pannello Ext2fs e inserirli nei campi appropriati del pannello NTFS.
+/// </summary>
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,12 +20,15 @@ namespace RisolutoreEsercizi {
                                                   Convert.ToInt64(ext2fsForm.dimInodeText), ext2fsForm.KBPressed, ext2fsForm.MBPressed,
                                                   Convert.ToInt64(ext2fsForm.numBlocIndexText), Convert.ToInt64(ext2fsForm.indirirNum));
 
+            //Se c'è stato un errore durante il calcolo del file ritorna senza scrivere nulla
+            if (maxFile == 0) {
+                return;
+            }
+
             //Scrivo nel pannello NTFS i datiprelevati
             ntfsForm.dimParText = ext2fsForm.dimParText;
             ntfsForm.dimBlocText = ext2fsForm.dimBloccoText;
             ntfsForm.dimFileText = maxFile.ToString();
-
-
 
         }
 

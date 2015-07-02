@@ -1,5 +1,5 @@
 ﻿/// <summary>
-/// Questa classe serve per risolvere gli esercizi nel pannello FAT
+/// Questa classe serve per risolvere gli esercizi nel pannello FAT.
 /// </summary>
 
 using System;

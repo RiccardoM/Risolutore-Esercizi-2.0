@@ -93,7 +93,6 @@
             // 
             // takeButton
             // 
-            this.takeButton.Enabled = false;
             this.takeButton.Location = new System.Drawing.Point(12, 217);
             this.takeButton.Name = "takeButton";
             this.takeButton.Size = new System.Drawing.Size(467, 39);

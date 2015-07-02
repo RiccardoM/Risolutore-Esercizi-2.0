@@ -59,6 +59,8 @@ namespace RisolutoreEsercizi {
 
             //Dimensione della struttura
             double strutDim = 0;
+
+            //Prova a risolvere
             try {
                 switch (numIndir) {
                     case 0:
@@ -87,6 +89,7 @@ namespace RisolutoreEsercizi {
             catch (System.OverflowException) {
                 errorMessage eMessage = new errorMessage();
                 eMessage.overflowError();
+                return 0;
             }
 
             maxFileDim = maxFileDim * dimBloc;

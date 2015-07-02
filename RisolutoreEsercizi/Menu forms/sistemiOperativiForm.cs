@@ -22,7 +22,7 @@ namespace RisolutoreEsercizi{
             InitializeComponent();
         }
 
-        //Richiamo il form dei File System
+        //Richiama il form dei File System
         private void fileSystemToolStripMenuItem_Click(object sender, EventArgs e){
             fileSystemForm FSForm = new fileSystemForm();
             FSForm.TopLevel = false;

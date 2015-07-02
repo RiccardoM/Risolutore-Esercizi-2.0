@@ -34,3 +34,6 @@ Novità:
 ## Versione 2.0.3b
   - Aggiunto il pulsante per la generazione casuale dei dati all'interno della sezione NTFS
 
+## Versione 2.0.3v
+  - Aggiunto il pulsante per il prelievo dei dati dalla sezione Ext2fs verso la sezione NTFS
+
