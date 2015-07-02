@@ -72,6 +72,22 @@ namespace RisolutoreEsercizi {
         // ###########################
         private void takeButton_Click(object sender, EventArgs e) {
 
+            try {
+                ntfsTakeData ntfsTake = new ntfsTakeData();
+                ntfsTake.takeData();
+
+                //Compila i campi
+                dimParTextbox.Text = dimParText;
+                dimBloccoTextbox.Text = dimBlocText;
+                dimFileTextbox.Text = dimFileText;
+                BRadioButton.Checked = true;
+            }
+
+            //Gestione dell'eccezione se la sezione Etx2fs non è completa di tutti i dati
+            catch (System.FormatException) {
+                eMessage.formatErrorExt2fs();
+            }
+
         }
 
 
