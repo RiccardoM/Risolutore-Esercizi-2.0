@@ -47,8 +47,5 @@ Bugfix:
   - Risolto il bug che non permetteva di passare dalla sezione Ext2fs a quella NTFS e viceversa
 
 ## Versione 2.0.3d
-Novità:
-  - Risolto il problema di calcolo nel pannello Ext2fs
-
 Bugfix:
   - Risolto l'errore di calcolo nella sezione Ext2fs
