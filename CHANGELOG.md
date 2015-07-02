@@ -21,12 +21,16 @@ Novità:
 
 ## Versione 2.0.2b
 Novità:
-  - Aggiunto il pulsante per la generazione casuale dei dati all'interno della sezione FAT.
-  - Aggiunti i <summary> ad ogni classe e form per descrivere brevemente quale compito svolge ognuno di loro.
+  - Aggiunto il pulsante per la generazione casuale dei dati all'interno della sezione FAT
+  - Aggiunti i <summary> ad ogni classe e form per descrivere brevemente quale compito svolge ognuno di loro
 
 ## Versione 2.0.2c
 Novità:
-  - Aggiunto il pulsante per il prelievo dei dati dalla sezione Ext2fs verso la sezione FAT.
+  - Aggiunto il pulsante per il prelievo dei dati dalla sezione Ext2fs verso la sezione FAT
 
 ## Versione 2.0.3a
-  - Aggiunta la sezione NTFS
+  - Aggiunta la sezione NTFS (incompleta)
+
+## Versione 2.0.3b
+  - Aggiunto il pulsante per la generazione casuale dei dati all'interno della sezione NTFS
+

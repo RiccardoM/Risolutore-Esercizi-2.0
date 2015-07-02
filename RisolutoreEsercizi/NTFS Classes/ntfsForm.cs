@@ -80,6 +80,24 @@ namespace RisolutoreEsercizi {
         // ######################################
         private void generateButton_Click(object sender, EventArgs e) {
 
+            //Crea nuova istanza della classe per generare i dati
+            ntfsGenerate ntfsGen = new ntfsGenerate();
+
+            //Genera dati
+            ntfsGen.generate();
+
+            //Compila i campi
+            dimParTextbox.Text = dimParText;
+            dimBloccoTextbox.Text = dimBlocText;
+            dimFileTextbox.Text = dimFileText;
+            BRadioButton.Checked = BButton;
+            KBRadioButton.Checked = KBButton;
+            MBRadioButton.Checked = MBButton;
+            GBRadioButton.Checked = GBButton;
+            dimRecordTextbox.Text = dimRecord;
+            resBytePrinTextbox.Text = resBytePrin;
+            resByteSecTextbox.Text = resByteSec;
+
         }
 
 

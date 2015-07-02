@@ -51,7 +51,6 @@
             // 
             // generateButton
             // 
-            this.generateButton.Enabled = false;
             this.generateButton.Location = new System.Drawing.Point(12, 286);
             this.generateButton.Name = "generateButton";
             this.generateButton.Size = new System.Drawing.Size(467, 39);

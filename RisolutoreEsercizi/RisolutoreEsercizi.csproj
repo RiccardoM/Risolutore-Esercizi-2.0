@@ -108,6 +108,7 @@
     <Compile Include="NTFS Classes\ntfsResultsForm.Designer.cs">
       <DependentUpon>ntfsResultsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NTFS Classes\ntfsGenerate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FAT Classes\fatResultsForm.resx">
