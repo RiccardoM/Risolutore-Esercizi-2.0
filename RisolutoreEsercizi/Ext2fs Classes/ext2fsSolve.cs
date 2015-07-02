@@ -56,7 +56,7 @@ namespace RisolutoreEsercizi {
             long numBlocInd = dimInode / (numBit / 8);
 
             //Dimensione massima del file
-            long maxFileDim = 0;
+            double maxFileDim = 0;
 
             //Dimensione della struttura
             double strutDim = 0;
@@ -76,12 +76,12 @@ namespace RisolutoreEsercizi {
 
                 case 2:
                     maxFileDim = (numIndexPrin + numBlocInd + Convert.ToInt64(Math.Pow(numBlocInd, 2)));
-                    strutDim = (2 + numBlocInd) * dimInode;
+                    strutDim = (3 + numBlocInd) * dimInode;
                     break;
 
                 case 3:
                     maxFileDim = (numIndexPrin + numBlocInd + Convert.ToInt64(Math.Pow(numBlocInd, 2)) + Convert.ToInt64(Math.Pow(numBlocInd, 3)));
-                    strutDim = (3 + numBlocInd + Convert.ToInt64(Math.Pow(numBlocInd, 2))) * dimInode;
+                    strutDim = (4 + numBlocInd + Convert.ToInt64(Math.Pow(numBlocInd, 2))) * dimInode;
                     break;
                 }
             }
@@ -97,7 +97,6 @@ namespace RisolutoreEsercizi {
 
             //Calcolo il rapporto inflattivo
             double rapp = Math.Round((strutDim / maxFileDim), 5) * 100;
-
 
 
             // ######################################

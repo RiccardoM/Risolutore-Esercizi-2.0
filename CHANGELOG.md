@@ -34,9 +34,12 @@ Novità:
 ## Versione 2.0.3b
   - Aggiunto il pulsante per la generazione casuale dei dati all'interno della sezione NTFS
 
-## Versione 2.0.3v
+## Versione 2.0.3c
   - Aggiunto il pulsante per il prelievo dei dati dalla sezione Ext2fs verso la sezione NTFS
   - Aggiunto il <summary> alle classi ed i forms inerenti gli esercizi NTFS
   - Modificati i pulsanti per passare da una sezione all'altra, ora vengono disabilitati alla loro pressione per segnalare in quale sezione ci si trova
   - Migliorati alcuni commenti al codice
+
+## Versione 2.0.3d
+  - Risolto il problema di calcolo nel pannello Ext2fs
 
